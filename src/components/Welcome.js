@@ -8,7 +8,7 @@ const Welcome = () => {
         <div>
             <div className="content-div">
                 <div className="orange-banner-sm"></div>
-                <h1>Welcome to Alaphia Moments TESTING</h1>
+                <h1>Welcome to Alaphia Moments</h1>
                 <br />
                 <p><strong>Welcome to Alaphia Moments, your trusted guide to financial peace, designed to support you in your journey towards a healthier financial mindset.</strong></p>
                 <p></p>
