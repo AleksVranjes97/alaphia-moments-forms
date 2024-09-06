@@ -152,6 +152,11 @@ text {
   text-anchor: middle;
 }
 
+input[type=radio] {
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
 input[type=radio]:hover {
   cursor: pointer;
 }
@@ -165,6 +170,11 @@ input[type=text] {
 
 input[type=text]:focus {
   outline: none;
+}
+
+input[type=checkbox] {
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 label {
