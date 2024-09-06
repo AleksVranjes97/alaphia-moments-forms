@@ -227,6 +227,7 @@ const Congratulations = () => {
     }
 
     useEffect(() => {
+        console.log(formattedData);
         createData();
     }, []);
 

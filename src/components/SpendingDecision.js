@@ -14,22 +14,24 @@ const SpendingDecision = () => {
         </div>
         <div className="content-div">
             <p><strong>Is there a spending decision involved in this moment? </strong><span className="error-span">*</span></p>
-            <input type="radio" 
-                   id="yes" 
-                   name="spendingDecision"
-                   value="yes"
-                   checked={data.spendingDecision === "yes"}
-                   onChange={handleChange} />
-            <label htmlFor="yes">Yes</label><br></br>
-            <br />
-            <input type="radio" 
-                   id="no" 
-                   name="spendingDecision"
-                   value="no"
-                   checked={data.spendingDecision === "no"}
-                   onChange={handleChange} />
-            <label htmlFor="no">No</label><br></br>
-            <br />
+            <div className="options-div">
+                <input type="radio" 
+                    id="yes" 
+                    name="spendingDecision"
+                    value="yes"
+                    checked={data.spendingDecision === "yes"}
+                    onChange={handleChange} />
+                <label htmlFor="yes">Yes</label>
+            </div>
+            <div className="options-div">
+                <input type="radio" 
+                    id="no" 
+                    name="spendingDecision"
+                    value="no"
+                    checked={data.spendingDecision === "no"}
+                    onChange={handleChange} />
+                <label htmlFor="no">No</label>
+            </div>
         </div>
     </div>
     )

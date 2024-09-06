@@ -15,100 +15,100 @@ const AnyoneElseInvolved = () => {
             <div className={(error ? 'invalid-input-div' : 'content-div')}>
                 <p><strong>Is there anyone else involved or connected to this moment? </strong><span className="error-span">*</span></p>
                 <div className="checkbox-div">
-                    <label>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="noejm" 
                                name="anyoneElseInvolved"
                                value="No one else, just me."
                                checked={data.anyoneElseInvolved.includes("No one else, just me.")}
                                onChange={handleChange} />
-                        No one else, just me.
-                    </label>
-                    <label>
+                         <label htmlFor="noejm">No one else, just me.</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="spouse" 
                                name="anyoneElseInvolved" 
                                value="Spouse"
                                checked={data.anyoneElseInvolved.includes("Spouse")}
                                onChange={handleChange} />
-                        Spouse
-                    </label>
-                    <label>
+                         <label htmlFor="spouse">Spouse</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="children" 
                                name="anyoneElseInvolved"
                                value="Children"
                                checked={data.anyoneElseInvolved.includes("Children")}
                                onChange={handleChange} />
-                        Children
-                    </label>
-                    <label>
+                         <label htmlFor="children">Children</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="of" 
                                name="anyoneElseInvolved"
                                value="Other family"
                                checked={data.anyoneElseInvolved.includes("Other family")}
                                onChange={handleChange} />
-                        Other family
-                    </label>
-                    <label>
+                         <label htmlFor="of">Other family</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="friends" 
                                name="anyoneElseInvolved"
                                value="Friends"
                                checked={data.anyoneElseInvolved.includes("Friends")}
                                onChange={handleChange} />
-                        Friends
-                    </label>
-                    <label>
+                         <label htmlFor="friends">Friends</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="colleagues" 
                                name="anyoneElseInvolved" 
                                value="Colleagues"
                                checked={data.anyoneElseInvolved.includes("Colleagues")}
                                onChange={handleChange} />
-                        Colleagues
-                    </label>
-                    <label>
+                         <label htmlFor="colleagues">Colleagues</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="teammates" 
                                name="anyoneElseInvolved"
                                value="Teammates"
                                checked={data.anyoneElseInvolved.includes("Teammates")}
                                onChange={handleChange} />
-                        Teammates
-                    </label>
-                    <label>
+                         <label htmlFor="teammates">Teammates</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="classmates" 
                                name="anyoneElseInvolved"
                                value="Classmates"
                                checked={data.anyoneElseInvolved.includes("Classmates")}
                                onChange={handleChange} />
-                        Classmates
-                    </label>
-                    <label>
+                         <label htmlFor="classmates">Classmates</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="exes" 
                                name="anyoneElseInvolved"
                                value="Exes"
                                checked={data.anyoneElseInvolved.includes("Exes")}
                                onChange={handleChange} />
-                        Exes
-                    </label>
-                    <label>
+                         <label htmlFor="exes">Exes</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="otherAeiCb"
                                name="aEIOtherCheckbox"
                                checked={data.aEIOtherCheckbox}
                                onChange={handleOther}/>
-                        Other
+                         <label htmlFor="otherAeiCb">Other</label>
                         <input type="text"
                                id="aEIOtherField"
                                name="aEIOtherField"
                                value={data.aEIOtherField}
                                onChange={handleChange} />
-                    </label>
+                    </div>
                     { error ? <p className="error-p">Please select at least one option</p> : <br></br>}
                 </div>
             </div>

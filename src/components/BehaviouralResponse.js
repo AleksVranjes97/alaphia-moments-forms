@@ -13,7 +13,7 @@ const BehaviouralResponse = () => {
                 <p className="error-p">* Indicates required question</p>
             </div>
             <div className={(error ? "invalid-input-div" : "content-div")}>
-                <p><strong>What type of behavioural response did you exhibit based on the needs and emotions you identified in this reflective exercise?</strong></p>
+                <p><strong>What type of behavioural response did you exhibit based on the needs and emotions you identified in this reflective exercise? </strong><span className="error-span">*</span></p>
                 <p>Examples of behaviour responses are usually one word verbs.</p>
                 <p>For instance:</p>
                 <p>Avoidance and Withdrawal Avoiding, Numbing (through screens, eating, substances, shopping, etc.)Quitting,Procrastinating, Ignoring, Withdrawing, Denying, Sleeping, Leaving, Pretending</p>

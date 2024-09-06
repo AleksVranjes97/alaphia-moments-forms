@@ -18,23 +18,24 @@ const Welcome = () => {
                 <br />           
             </div>
             <div className="content-div">
-                <br />
-                <input type="radio" 
-                       id="keep"
-                       name="keepReading"
-                       value="true"
-                       checked={data.keepReading === "true"}
-                       onChange={handleChange} />
-                <label for="keep">Keep reading</label><br></br>
-                <br />
-                <input type="radio" 
-                       id="donebefore"
-                       name="keepReading"
-                       value="false"
-                       checked={data.keepReading === "false"}
-                       onChange={handleChange} />
-                <label for="donebefore">I've done this before. Take me to the tool</label><br></br>
-                <br />
+                <div className="options-div">
+                    <input type="radio" 
+                           id="keep"
+                           name="keepReading"
+                           value="true"
+                           checked={data.keepReading === "true"}
+                           onChange={handleChange} />
+                    <label for="keep">Keep reading</label>
+                </div>
+                <div className="options-div">
+                    <input type="radio" 
+                           id="donebefore"
+                           name="keepReading"
+                           value="false"
+                           checked={data.keepReading === "false"}
+                           onChange={handleChange} />
+                    <label for="donebefore">I've done this before. Take me to the tool</label>
+                </div>
             </div>
         </div>
     )

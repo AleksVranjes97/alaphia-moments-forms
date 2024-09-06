@@ -23,91 +23,92 @@ const CaptureOutcome = () => {
             <div className="content-div">
                 <p><strong>What is the feeling you're trying to capture?</strong></p>
                 <div className="checkbox-div">
-                    <label>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="invigoration" 
                                 name="captureFeeling"
                                 value="Invigoration"
                                 checked={data.captureFeeling.includes("Invigoration")}
                                 onChange={handleChange} />
-                        INVIGORATION Anticipation Interest, Curiosity
-                    </label>
-                    <label>
+                        <label htmlFor="invigoration">INVIGORATION Anticipation Interest, Curiosity</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="enjoyment" 
                                 name="captureFeeling"
                                 value="Enjoyment"
                                 checked={data.captureFeeling.includes("Enjoyment")}
                                 onChange={handleChange} />
-                        ENJOYMENT Contentment, Satisfaction, Relaxation, Amusement, Relief
-                    </label>
-                    <label>
+                        <label htmlFor="enjoyment">ENJOYMENT Contentment, Satisfaction, Relaxation, Amusement, Relief</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="joy" 
                                 name="captureFeeling"
                                 value="joy"
                                 checked={data.captureFeeling.includes("joy")}
                                 onChange={handleChange} />
-                        JOY Happiness, Delight, Excitement, bliss, euphoria
-                    </label>
-                    <label>
+                        <label htmlFor="joy">JOY Happiness, Delight, Excitement, bliss, euphoria</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="trust" 
                                 name="captureFeeling"
                                 value="Trust"
                                 checked={data.captureFeeling.includes("Trust")}
                                 onChange={handleChange} />
-                        TRUST, Assurance, tolerance
-                    </label>
-                    <label>
+                        <label htmlFor="trust">TRUST, Assurance, tolerance</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="confidence" 
                                 name="captureFeeling"
                                 value="Confidence"
                                 checked={data.captureFeeling.includes("Confidence")}
                                 onChange={handleChange} />
-                        CONFIDENCE, self assurance,
-                    </label>
-                    <label>
+                        <label htmlFor="confidence">CONFIDENCE, self assurance</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="surprise" 
                                 name="captureFeeling"
                                 value="Surprise"
                                 checked={data.captureFeeling.includes("Surprise")}
                                 onChange={handleChange} />
-                        SURPRISE  Distraction, interest, awe
-                    </label>
-                    <label>
+                        <label htmlFor="surprise">SURPRISE  Distraction, interest, awe</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="calm" 
                                 name="captureFeeling"
                                 value="calm"
                                 checked={data.captureFeeling.includes("calm")}
                                 onChange={handleChange} />
-                        CALM, peacefulness, serenity, equanimity
-                    </label>
-                    <label>
+                        <label htmlFor="calm">CALM, peacefulness, serenity, equanimity</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="idk4" 
                                 name="captureFeeling"
                                 value="I don't know/not sure"
                                 checked={data.captureFeeling.includes("I don't know/not sure")}
                                 onChange={handleChange} />
-                        I don't know/not sure
-                    </label>
-                    <label>
+                        <label htmlFor="idk4">I don't know/not sure</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="otherCOCb"
                                name="cOOtherCheckbox"
                                checked={data.cOOtherCheckbox}
                                onChange={handleOther}/>
-                        Other
+                        <label htmlFor="otherCOCb">Other</label>
                         <input type="text"
                                id="cOOtherField"
                                name="cOOtherField"
                                value={data.cOOtherField}
                                onChange={handleChange} />
-                    </label>
+                    </div>
+                    <br />
                 </div>
             </div>
             <div className="content-div">

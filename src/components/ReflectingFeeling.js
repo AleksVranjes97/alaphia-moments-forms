@@ -15,136 +15,137 @@ const ReflectingFeeling = () => {
             <div className="content-div">
                 <p><strong>What feeling are you experiencing in the moment you're reflecting on?</strong><span className="error-span"></span></p>
                 <div className="checkbox-div">
-                    <label>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="sadness" 
+                                id="sadness2"
                                 name="reflectingFeeling"
                                 value="Sadness"
                                 checked={data.reflectingFeeling.includes("Sadness")}
                                 onChange={handleChange} />
-                        Sadness Disappointment, grief, anguish, despair, heartache, loneliness
-                    </label>
-                    <label>
+                        <label htmlFor="sadness2">Sadness Disappointment, grief, anguish, despair, heartache, loneliness</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="fear" 
+                                id="fear2" 
                                 name="reflectingFeeling"
                                 value="Fear"
                                 checked={data.reflectingFeeling.includes("Fear")}
                                 onChange={handleChange} />
-                        Fear Apprehension, Worry, Nervousness, Unease, anxiety, alarm, panic
-                    </label>
-                    <label>
+                        <label htmlFor="fear2">Fear Apprehension, Worry, Nervousness, Unease, anxiety, alarm, panic</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="shame" 
+                                id="shame2" 
                                 name="reflectingFeeling"
                                 value="Shame"
                                 checked={data.reflectingFeeling.includes("Shame")}
                                 onChange={handleChange} />
-                        Shame Sheepishness, embarrasment, humiliation, disgrace
-                    </label>
-                    <label>
+                        <label htmlFor="shame2">Shame Sheepishness, embarrasment, humiliation, disgrace</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="envy" 
+                                id="envy2" 
                                 name="reflectingFeeling"
                                 value="Envy"
                                 checked={data.reflectingFeeling.includes("Envy")}
                                 onChange={handleChange} />
-                        Envy Jealousy
-                    </label>
-                    <label>
+                        <label htmlFor="envy2">Envy Jealousy</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="guilt" 
+                                id="guilt2" 
                                 name="reflectingFeeling"
                                 value="Guilt"
                                 checked={data.reflectingFeeling.includes("Guilt")}
                                 onChange={handleChange} />
-                        Guilt Regretful, Sorry
-                    </label>
-                    <label>
+                        <label htmlFor="guilt2">Guilt Regretful, Sorry</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="anger" 
+                                id="anger3" 
                                 name="reflectingFeeling"
                                 value="Anger"
                                 checked={data.reflectingFeeling.includes("Anger")}
                                 onChange={handleChange} />
-                        Anger Annoyance, Irritation, Frustration, Agitation, rage, fury
-                    </label>
-                    <label>
+                        <label htmlFor="anger3">Anger Annoyance, Irritation, Frustration, Agitation, rage, fury</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="contempt" 
+                                id="contempt2" 
                                 name="reflectingFeeling"
                                 value="Contempt"
                                 checked={data.reflectingFeeling.includes("Contempt")}
                                 onChange={handleChange} />
-                        Contempt, Revulsion, Loathing, Repugnance, disgust
-                    </label>
-                    <label>
+                        <label htmlFor="contempt2">Contempt, Revulsion, Loathing, Repugnance, disgust</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="trust" 
+                                id="trust2" 
                                 name="reflectingFeeling"
                                 value="Trust"
                                 checked={data.reflectingFeeling.includes("Trust")}
                                 onChange={handleChange} />
-                        Trust, Assurance, tolerance
-                    </label>
-                    <label>
+                        <label htmlFor="trust2">Trust, Assurance, tolerance</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="admiration" 
                                 name="reflectingFeeling"
                                 value="Admiration"
                                 checked={data.reflectingFeeling.includes("Admiration")}
                                 onChange={handleChange} />
-                        Admiration, Respect
-                    </label>
-                    <label>
+                        <label htmlFor="admiration">Admiration, Respect</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="surprise" 
+                                id="surprise2" 
                                 name="reflectingFeeling"
                                 value="Surprise"
                                 checked={data.reflectingFeeling.includes("Surprise")}
                                 onChange={handleChange} />
-                        Surprise Distraction, interest, awe
-                    </label>
-                    <label>
+                        <label htmlFor="surprise2">Surprise Distraction, interest, awe</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="enjoyment" 
+                                id="enjoyment2" 
                                 name="reflectingFeeling"
                                 value="Enjoyment"
                                 checked={data.reflectingFeeling.includes("Enjoyment")}
                                 onChange={handleChange} />
-                        Enjoyment Contentment, Satisfaction, Relaxation, Amusement, Relief
-                    </label>
-                    <label>
+                        <label htmlFor="enjoyment2">Enjoyment Contentment, Satisfaction, Relaxation, Amusement, Relief</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="joy" 
+                                id="joy2" 
                                 name="reflectingFeeling"
                                 value="Joy"
                                 checked={data.reflectingFeeling.includes("Joy")}
                                 onChange={handleChange} />
-                        Joy, Happiness, Delight, Excitement, bliss, euphoria
-                    </label>
-                    <label>
+                        <label htmlFor="joy2">Joy, Happiness, Delight, Excitement, bliss, euphoria</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="idk5" 
                                 name="reflectingFeeling"
                                 value="I don't know/not sure"
                                 checked={data.reflectingFeeling.includes("I don't know/not sure")}
                                 onChange={handleChange} />
-                        I don't know/not sure
-                    </label>
-                    <label>
+                        <label htmlFor="idk5">I don't know/not sure</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="otherRFCb"
                                name="rFOtherCheckbox"
                                checked={data.rFOtherCheckbox}
                                onChange={handleOther}/>
-                        Other
+                       <label htmlFor="otherRFCb">Other</label>
                         <input type="text"
                                id="rFOtherField"
                                name="rFOtherField"
                                value={data.rFOtherField}
                                onChange={handleChange} />
-                    </label>
+                    </div>
+                    <br />
                 </div>
             </div>
             <div className={(error ? 'invalid-input-div' : 'content-div')}>

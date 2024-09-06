@@ -23,91 +23,92 @@ const AvoidOutcome = () => {
             <div className="content-div">
                 <p><strong>What is the feeling you're trying to avoid?</strong></p>
                 <div className="checkbox-div">
-                    <label>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="sadness" 
                                 name="avoidFeeling"
                                 value="Sadness"
                                 checked={data.avoidFeeling.includes("Sadness")}
                                 onChange={handleChange} />
-                        SADNESS Disappointment, grief, anguish, despair, heartache, loneliness
-                    </label>
-                    <label>
+                        <label htmlFor="sadness">SADNESS Disappointment, grief, anguish, despair, heartache, loneliness</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="fear" 
                                 name="avoidFeeling"
                                 value="Fear"
                                 checked={data.avoidFeeling.includes("Fear")}
                                 onChange={handleChange} />
-                        FEAR Apprehension, Worry, Nervousness, Unease, anxiety, alarm, panic
-                    </label>
-                    <label>
+                        <label htmlFor="fear">FEAR Apprehension, Worry, Nervousness, Unease, anxiety, alarm, panic</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="envy" 
                                 name="avoidFeeling"
                                 value="Envy"
                                 checked={data.avoidFeeling.includes("Envy")}
                                 onChange={handleChange} />
-                        ENVY Jealousy
-                    </label>
-                    <label>
+                        <label htmlFor="envy">ENVY Jealousy</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="guilt" 
                                 name="avoidFeeling"
                                 value="Guilt"
                                 checked={data.avoidFeeling.includes("Guilt")}
                                 onChange={handleChange} />
-                        GUILT Regretful, Sorry
-                    </label>
-                    <label>
+                        <label htmlFor="guilt">GUILT Regretful, Sorry</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="shame" 
                                 name="avoidFeeling"
                                 value="Shame"
                                 checked={data.avoidFeeling.includes("Shame")}
                                 onChange={handleChange} />
-                        SHAME Sheepishness, embarrasment, humiliation, disgrace
-                    </label>
-                    <label>
+                        <label htmlFor="shame">SHAME Sheepishness, embarrasment, humiliation, disgrace</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                                id="anger" 
+                                id="anger2" 
                                 name="avoidFeeling"
                                 value="Anger"
                                 checked={data.avoidFeeling.includes("Anger")}
                                 onChange={handleChange} />
-                        ANGER Annoyance, Irritation, Frustration, Agitation, rage, fury
-                    </label>
-                    <label>
+                        <label htmlFor="anger2">ANGER Annoyance, Irritation, Frustration, Agitation, rage, fury</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="contempt" 
                                 name="avoidFeeling"
                                 value="Contempt"
                                 checked={data.avoidFeeling.includes("Contempt")}
                                 onChange={handleChange} />
-                        CONTEMPT Revulsion, Loathing, Repugnance, disgust
-                    </label>
-                    <label>
+                        <label htmlFor="contempt">CONTEMPT Revulsion, Loathing, Repugnance, disgust</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                 id="idk3" 
                                 name="avoidFeeling"
                                 value="I don't know/not sure"
                                 checked={data.avoidFeeling.includes("I don't know/not sure")}
                                 onChange={handleChange} />
-                        I don't know/not sure
-                    </label>
-                    <label>
+                        <label htmlFor="idk3">I don't know/not sure</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="otherAOCb"
                                name="aOOtherCheckbox"
                                checked={data.aOOtherCheckbox}
                                onChange={handleOther}/>
-                        Other
+                        <label htmlFor="otherAOCb">Other</label>
                         <input type="text"
                                id="aOOtherField"
                                name="aOOtherField"
                                value={data.aOOtherField}
                                onChange={handleChange} />
-                    </label>
+                    </div>
+                    <br />
                 </div>
             </div>
             <div className="content-div">

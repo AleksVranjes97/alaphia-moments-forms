@@ -439,25 +439,25 @@ const Form = () => {
             <FormInputs></FormInputs>
             <footer>
                 <div className="footer-div">
-                    <div className="buttons-div">
-                        <button className={`button ${prevHide}`}onClick={handlePrev}>Back</button>
+                    <div>
+                        <button type="button" className={`button ${prevHide}`}onClick={handlePrev}>Back</button>
                         {page === 16 ?
-                            <button className={`button ${nextHide}`}onClick={handleNext}>Submit</button>
+                            <button type="button" className={`button ${nextHide}`}onClick={handleNext}>Submit</button>
                             :
-                            <button className={`button ${nextHide}`}onClick={handleNext}>Next</button>
+                            <button type="button" className={`button ${nextHide}`}onClick={handleNext}>Next</button>
                         }
                     </div>
                     {page === 17 ? 
                         <></>
                         :
-                        <p>Page {page + 1} of 18</p>
+                        <p className="page-p">Page {page + 1}/18</p>
                     }
                     {/*<button onClick={jumpToGraph}>Graph</button>
                     <button onClick={firstPage}>First page</button>*/}
                     {page === 17  ? 
                         <></>
                         :
-                        <button className="clear-form-button" onClick={clearForm}>Clear Form</button>
+                        <button type="button" className="clear-form-button" onClick={clearForm}>Clear Form</button>
                     }
                 </div>
             </footer>

@@ -18,199 +18,199 @@ const CurrentState = () => {
                 <p>If you are reflecting on a past moment, try to recall your state of being at the time.</p>
                 <p>This list is not comprehensive. Please feel free to add your own.</p>
                 <div className="checkbox-div">
-                    <label>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="tired" 
                                name="currentState"
                                value="tired"
                                checked={data.currentState.includes("tired")}
                                onChange={handleChange} />
-                        tired
-                    </label>
-                    <label>
+                        <label htmlFor="tired">tired</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="hod" 
                                name="currentState"
                                value="hungry or dehydrated"
                                checked={data.currentState.includes("hungry or dehydrated")}
                                onChange={handleChange} />
-                        hungry or dehydrated
-                    </label>
-                    <label>
+                        <label htmlFor="hungry or dehydrated">hungry or dehydrated</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="excited"
                                name="currentState"
                                value="excited"
                                checked={data.currentState.includes("excited")}
                                onChange={handleChange} />
-                        excited
-                    </label>
-                    <label>
+                        <label htmlFor="excited">excited</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="peevish"
                                name="currentState"
                                value="peevish"
                                checked={data.currentState.includes("peevish")}
                                onChange={handleChange} />
-                        peevish
-                    </label>
-                    <label>
+                        <label htmlFor="peevish">peevish</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="bored"
                                name="currentState"
                                value="bored"
                                checked={data.currentState.includes("bored")}
                                onChange={handleChange} />
-                        bored
-                    </label>
-                    <label>
+                        <label htmlFor="bored">bored</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="lonely"
                                name="currentState"
                                value="lonely"
                                checked={data.currentState.includes("lonely")}
                                onChange={handleChange} />
-                        lonely
-                    </label>
-                    <label>
+                        <label htmlFor="lonely">lonely</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="utw"
                                name="currentState"
                                value="under the weather"
                                checked={data.currentState.includes("under the weather")}
                                onChange={handleChange} />
-                        under the weather
-                    </label>
-                    <label>
+                        <label htmlFor="utw">under the weather</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="restless"
                                name="currentState"
                                value="restless"
                                checked={data.currentState.includes("restless")}
                                onChange={handleChange} />
-                        restless
-                    </label>
-                    <label>
+                        <label htmlFor="restless">restless</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="balanced"
                                name="currentState"
                                value="balanced"
                                checked={data.currentState.includes("balanced")}
                                onChange={handleChange} />
-                        balanced
-                    </label>
-                    <label>
+                        <label htmlFor="balanced">balanced</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="rushed/pressured"
                                name="currentState"
                                value="rushed/pressured"
                                checked={data.currentState.includes("rushed/pressured")}
                                onChange={handleChange} />
-                        rushed/pressured
-                    </label>
-                    <label>
+                        <label htmlFor="rushed/pressured">rushed/pressured</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="calm"
                                name="currentState"
                                value="calm"
                                checked={data.currentState.includes("calm")}
                                onChange={handleChange} />
-                        calm
-                    </label>
-                    <label>
+                        <label htmlFor="calm">calm</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="energized"
                                name="currentState"
                                value="energized"
                                checked={data.currentState.includes("energized")}
                                onChange={handleChange} />
-                        energized
-                    </label>
-                    <label>
+                        <label htmlFor="energized">energized</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="hopeful"
                                name="currentState"
                                value="hopeful"
                                checked={data.currentState.includes("hopeful")}
                                onChange={handleChange} />
-                        hopeful
-                    </label>
-                    <label>
+                        <label htmlFor="hopeful">hopeful</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="frustrated"
                                name="currentState"
                                value="frustrated"
                                checked={data.currentState.includes("frustrated")}
                                onChange={handleChange} />
-                        frustrated
-                    </label>
-                    <label>
+                        <label htmlFor="frustrated">frustrated</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="anxious"
                                name="currentState"
                                value="anxious"
                                checked={data.currentState.includes("anxious")}
                                onChange={handleChange} />
-                        anxious
-                    </label>
-                    <label>
+                        <label htmlFor="anxious">anxious</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="happy"
                                name="currentState"
                                value="happy"
                                checked={data.currentState.includes("happy")}
                                onChange={handleChange} />
-                        happy
-                    </label>
-                    <label>
+                        <label htmlFor="happy">happy</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="alert"
                                name="currentState"
                                value="alert"
                                checked={data.currentState.includes("alert")}
                                onChange={handleChange} />
-                        alert
-                    </label>
-                    <label>
+                        <label htmlFor="alert">alert</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="overwhelmed"
                                name="currentState"
                                value="overwhelmed"
                                checked={data.currentState.includes("overwhelmed")}
                                onChange={handleChange} />
-                        overwhelmed
-                    </label>
-                    <label>
+                        <label htmlFor="oberwhelmed">overwhelmed</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="avoidant"
                                name="currentState"
                                value="avoidant"
                                checked={data.currentState.includes("avoidant")}
                                onChange={handleChange} />
-                        avoidant
-                    </label>
-                    <label>
+                        <label htmlFor="avoidant">avoidant</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
-                               id="idk"
+                               id="idkCS"
                                name="currentState"
                                value="I don't know/not sure"
                                checked={data.currentState.includes("I don't know/not sure")}
                                onChange={handleChange} />
-                        I don't know/not sure
-                    </label>
-                    <label>
+                        <label htmlFor="idkCS">I don't know/not sure</label>
+                    </div>
+                    <div className="check-options-div">
                         <input type="checkbox" 
                                id="othercSCb"
                                name="cSOtherCheckbox"
                                checked={data.cSOtherCheckbox}
                                onChange={handleOther}/>
-                        Other
+                        <label htmlFor="othercSCb">Other</label>
                         <input type="text"
                                id="cSOtherField"
                                name="cSOtherField"
                                value={data.cSOtherField}
                                onChange={handleChange} />
-                    </label>
+                    </div>
                     { error ? <p className="error-p">Please select at least one option</p> : <br></br>}
                 </div>
             </div>

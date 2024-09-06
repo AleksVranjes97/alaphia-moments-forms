@@ -10,8 +10,19 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  /* Web width and height */
   --div-width: 535px;
+  --image-height: 144px;
+
+  /* Smallest mobile device width and height */
+  --sm-mobile-div-width: 290px;
+  --sm-mobile-image-height: 82px;
+
+  /* All other mobile device width and height */
   --mobile-div-width: 335px;
+  --mobile-image-height: 95px;
+
   font-size: 1rem;
 }
 
@@ -21,11 +32,11 @@ code {
 }
 
 .master-form {
-  margin-top: 10px;
   margin-bottom: 20px;
 }
 
 .content-div {
+  margin: 10px auto;
   width: var(--div-width);
   max-width: var(--div-width);
   min-width: var(--div-width);
@@ -34,13 +45,13 @@ code {
   border-style: solid;
   border-color: #DDDDDD;
   border-width: thin;
-  margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
   overflow: hidden;
 }
 
 .invalid-input-div {
+  margin: 10px auto;
   width: var(--div-width);
   max-width: var(--div-width);
   min-width: var(--div-width);
@@ -49,24 +60,33 @@ code {
   border-style: solid;
   border-color: rgb(231, 0, 0);
   border-width: thin;
-  margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
   overflow: hidden;
 }
 
 .footer-div {
+  width: 585px;
+  margin-left: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 585px;
-  padding-bottom: 10px;
+
 }
 
-.buttons-div {
-  width: 300px;
-  max-width: 300px;
+.options-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.check-options-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px auto;
 }
 
 button {
@@ -90,19 +110,27 @@ button:hover {
 }
 
 .image-div {
+  margin: 10px auto;
   background: white;
-  width: 575px;
-  height: 145px;
+  width: var(--div-width);
+  height: var(--image-height);
   border-radius: 5px;
   border-style: solid;
   border-color: #DDDDDD;
   border-width: thin;
   background-image: url("./files/banner.png");
+  background-size: 100% auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .error-p {
   font-size: smaller;
   color: red;
+}
+
+.page-p {
+  font-size: 0.75rem;
 }
 
 .error-span {
@@ -111,8 +139,6 @@ button:hover {
 }
 
 .checkbox-div {
-  display: flex;
-  flex-direction: column;
   padding: 0
 }
 
@@ -124,11 +150,6 @@ text {
   fill: black;
   font-size: 8px;
   text-anchor: middle;
-}
-
-input[type=radio] {
-  width: 20px;
-  margin-right: 10px;
 }
 
 input[type=radio]:hover {
@@ -146,12 +167,9 @@ input[type=text]:focus {
   outline: none;
 }
 
-input[type=checkbox] {
-  margin-bottom: 20px;
-}
-
 label {
-  padding-right: 20px
+  padding-right: 20px;
+  margin-left: 5px;
 }
 
 .horiz-div {
@@ -205,8 +223,50 @@ h2 {
   margin-left: auto;
 }
 
-@media only screen and (max-width: 414px) {
-  [class*="content-div"] {
+@media screen and (max-width: 375px) {
+  .content-div {
+    width: var(--sm-mobile-div-width);
+    max-width: var(--sm-mobile-div-width);
+    min-width: var(--sm-mobile-div-width);
+  }
+
+  .invalid-input-div {
+    width: var(--sm-mobile-div-width);
+    max-width: var(--sm-mobile-div-width);
+    min-width: var(--sm-mobile-div-width);
+  }
+
+  .footer-div {
+    width: 337px;
+    margin-left: 10px;
+  }
+
+  .image-div {
+    width: var(--sm-mobile-div-width);
+    height: var(--sm-mobile-image-height);
+  }
+}
+
+@media screen and (max-width: 720px) and (min-width: 376px) {
+  .content-div {
     width: var(--mobile-div-width);
+    max-width: var(--mobile-div-width);
+    min-width: var(--mobile-div-width);
+  }
+
+  .invalid-input-div {
+    width: var(--mobile-div-width);
+    max-width: var(--mobile-div-width);
+    min-width: var(--mobile-div-width);
+  }
+
+  .footer-div {
+    width: 383px;
+    margin-left: 10px;
+  }
+
+  .image-div {
+    width: var(--mobile-div-width);
+    height: var(--mobile-image-height);
   }
 }
