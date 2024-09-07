@@ -1,4 +1,3 @@
-//import { ResponsiveCirclePacking } from '@nivo/circle-packing';
 import React from 'react'
 import useFormContext from "../hooks/useFormContext";
 import * as d3 from "d3";
@@ -113,9 +112,9 @@ const PackedCircle = ( { formattedData }) => {
   }
 
   return (
-    <div>
-      <div ref={renderGraph(600, 600)}>
-        <svg width="600" height="600">
+    <div> 
+      <div ref={renderGraph(520, 520)}>
+        <svg width="500" height="500">
           <g></g>
         </svg>
       </div> 

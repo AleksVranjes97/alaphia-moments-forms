@@ -6,6 +6,7 @@ export const FormProvider = ({ children }) => {
 
     const [page, setPage] = useState(0);
     const [error, setError] = useState(false);
+    const [clearModal, setClearModal] = useState(false);
 
     const [data, setData] = useState({
         keepReading: "true",
@@ -122,7 +123,7 @@ export const FormProvider = ({ children }) => {
     }
 
     return (
-        <FormContext.Provider value={{page, setPage, error, setError, data, setData, formattedData, setFormattedData, prevHide, nextHide, handleChange, handleOther}}>
+        <FormContext.Provider value={{page, setPage, error, setError, clearModal, setClearModal, data, setData, formattedData, setFormattedData, prevHide, nextHide, handleChange, handleOther}}>
             {children}
         </FormContext.Provider>
     )

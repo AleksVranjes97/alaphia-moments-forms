@@ -158,7 +158,7 @@ const Needs = () => {
                                name="nOtherCheckbox"
                                checked={data.nOtherCheckbox}
                                onChange={handleOther}/>
-                        Other
+                        <label htmlFor="otherNeedsCb">Other</label>
                         <input type="text"
                                id="nOtherField"
                                name="nOtherField"

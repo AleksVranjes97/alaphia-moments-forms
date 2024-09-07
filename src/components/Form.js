@@ -1,4 +1,5 @@
 import useFormContext from "../hooks/useFormContext";
+import ClearFormModal from "./ClearFormModal";
 import FormInputs from "./FormInputs";
 
 const Form = () => {
@@ -7,6 +8,8 @@ const Form = () => {
         setPage,
         error,
         setError,
+        clearModal,
+        setClearModal,
         data,
         setData,
         prevHide,
@@ -375,15 +378,11 @@ const Form = () => {
         setPage(19);
     }
 
-    // Debugging
-    const firstPage = () => {
-        setPage(0);
-    }
-
     //------------------------------------//
     // Set all form data back to defaults //
     //------------------------------------//
     const clearForm = () => {
+        setClearModal(false);
         setError(false);
         const newData = {
             keepReading: "true",
@@ -427,24 +426,25 @@ const Form = () => {
             rFOtherCheckbox: false,
             rFBodyFeeling: "",
             behaviouralResponse: "",
-        };
+        }
         setData(newData);
+        setPage(0);
     }
 
     const content = (
-        <form className='master-form' onSubmit={handleSubmit}>
+        <form className={(clearModal ? "dim-background-div" : "master-form")} onSubmit={handleSubmit}>
             <header>
                 <div className="image-div"></div>
             </header>
-            <FormInputs></FormInputs>
+            <FormInputs></FormInputs> 
             <footer>
                 <div className="footer-div">
                     <div>
-                        <button type="button" className={`button ${prevHide}`}onClick={handlePrev}>Back</button>
+                        <button type="button" className={`normal-button ${prevHide}`}onClick={handlePrev}>Back</button>
                         {page === 16 ?
-                            <button type="button" className={`button ${nextHide}`}onClick={handleNext}>Submit</button>
+                            <button type="button" className={`normal-button ${nextHide}`}onClick={handleNext}>Submit</button>
                             :
-                            <button type="button" className={`button ${nextHide}`}onClick={handleNext}>Next</button>
+                            <button type="button" className={`normal-button ${nextHide}`}onClick={handleNext}>Next</button>
                         }
                     </div>
                     {page === 17 ? 
@@ -452,10 +452,9 @@ const Form = () => {
                         :
                         <p className="page-p">Page {page + 1}/18</p>
                     }
-                    {/*<button onClick={jumpToGraph}>Graph</button>
-                    <button onClick={firstPage}>First page</button>*/}
+                    {/*<button onClick={jumpToGraph}>Graph</button>*/}
                     {page === 17  ? 
-                        <></>
+                        <button type="button" className="clear-form-button" onClick={clearForm}>Home</button>
                         :
                         <button type="button" className="clear-form-button" onClick={clearForm}>Clear Form</button>
                     }
