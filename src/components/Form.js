@@ -453,6 +453,7 @@ const Form = () => {
                         <p className="page-p">Page {page + 1}/18</p>
                     }
                     {/*<button onClick={jumpToGraph}>Graph</button>*/}
+                    {/*<button onClick={printData}>Print</button>*/}
                     {page === 17  ? 
                         <button type="button" className="clear-form-button" onClick={clearForm}>Home</button>
                         :

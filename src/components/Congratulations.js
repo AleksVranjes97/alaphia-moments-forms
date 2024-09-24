@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import useFormContext from "../hooks/useFormContext";
 import PackedCircle from "./PackedCircle";
+import MomentMap from "./MomentMap";
 
 const Congratulations = () => {
 
@@ -234,10 +235,14 @@ const Congratulations = () => {
     const content = (
         <div>
             <div className="content-div">
-                <p><strong>Congratulations on completing this exploration, and taking another step toward financial wellness!</strong></p>
+                <h1>MY</h1>
+                <h1>MOMENT</h1>
+                <h1>MAP</h1>
             </div>
+            {/*<PackedCircle formattedData={formattedData}></PackedCircle>*/}
+            <MomentMap></MomentMap>
             <div className="content-div">
-                <PackedCircle formattedData={formattedData}></PackedCircle>
+                
             </div>
         </div>
     )

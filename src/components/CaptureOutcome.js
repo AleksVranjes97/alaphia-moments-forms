@@ -2,7 +2,7 @@ import useFormContext from "../hooks/useFormContext";
 
 const CaptureOutcome = () => {
 
-    const { data, handleChange, handleOther } = useFormContext()
+    const { data, handleChange, handleOther } = useFormContext();
 
     const content = (
         <div>

@@ -278,6 +278,28 @@ h2 {
   margin-bottom: 20px;
 }
 
+.lines-div {
+  position: relative;
+  width: var(--div-width);
+  max-width: var(--div-width);
+  min-width: var(--div-width);
+  height: 2200px;
+  background-image: url("./files/lines_desktop.png");
+  background-size: 100% auto;
+  overflow: auto;
+}
+
+.map_label_div {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 8px;
+  border-style: solid;
+  border-style: none;
+  box-shadow: 1px 4px 5px 1px rgb(0 0 0 / 20%);
+  font-weight: bold;
+}
+
 @media screen and (max-width: 375px) {
   .content-div {
     width: var(--sm-mobile-div-width);
