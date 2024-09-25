@@ -86,7 +86,7 @@ const MomentLocation = () => {
                                value="At a social gathering"
                                checked={data.momentLocation.includes("At a social gathering")}
                                onChange={handleChange} />
-                         <label htmlFor="asag">At a social gathering</label>
+                         <label htmlFor="aasg">At a social gathering</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
