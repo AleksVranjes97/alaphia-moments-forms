@@ -42,7 +42,7 @@ export default function MomentMap() {
             {/* momentLocation */}
             <div className="img-div" style={{marginLeft: "65px", marginTop: "75px", background: "#e3ec63"}}></div>
             <div className="map_label_div" style={{backgroundColor: "#e3ec63", marginLeft: "85px", marginTop: "100px"}}>I was / I'm</div>
-            <div className="map_label_div" style={{backgroundColor: "#fafecc", marginLeft: "85px", marginTop: "10px", maxWidth: "200px"}}>{stringifyArray(data.momentLocation)}</div>
+            <div className="map_label_div" style={{backgroundColor: "#fafecc", marginLeft: "85px", marginTop: "10px", maxWidth: "160px"}}>{stringifyArray(data.momentLocation)}</div>
 
             {/* anyoneElseInvolved */}
             <div className="img-div" style={{left: "255px", top: "105px", background: "#e3ec63"}}></div>
@@ -69,7 +69,7 @@ export default function MomentMap() {
                 <>
                     <div className="img-div" style={{left: "248px", top: "710px", background: "#cfd283"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#cfd283", position: "absolute", top: "730px", left: "270px", maxWidth: "200px"}}>My goal is to prevent</div>
-                    <div className="map_label_div" style={{backgroundColor: "#f3f4cf", position: "absolute", top: "770px", left: "270px", maxWidth: "200px"}}>{data.avoidOutcomeText}</div>
+                    <div className="map_label_div" style={{backgroundColor: "#f3f4cf", position: "absolute", top: "770px", left: "270px", maxWidth: "170px"}}>{data.avoidOutcomeText}</div>
                 </>
             :
                 <></>
@@ -91,7 +91,7 @@ export default function MomentMap() {
                 <>
                     <div className="img-div" style={{left: "268px", top: "970px", background: "#f7ef98"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#f7ef98", position: "absolute", top: "990px", left: "290px", maxWidth: "200px"}}>I am trying not to feel</div>
-                    <div className="map_label_div" style={{backgroundColor: "#f8f5cc", position: "absolute", top: "1030px", left: "290px", maxWidth: "200px"}}>{stringifyArray(data.avoidFeeling)}</div>
+                    <div className="map_label_div" style={{backgroundColor: "#f8f5cc", position: "absolute", top: "1030px", left: "290px", maxWidth: "170px"}}>{stringifyArray(data.avoidFeeling)}</div>
                 </>
             :
                 <></>

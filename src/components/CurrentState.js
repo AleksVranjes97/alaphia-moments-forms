@@ -34,7 +34,7 @@ const CurrentState = () => {
                                value="hungry or dehydrated"
                                checked={data.currentState.includes("hungry or dehydrated")}
                                onChange={handleChange} />
-                        <label htmlFor="hungry or dehydrated">hungry or dehydrated</label>
+                        <label htmlFor="hod">hungry or dehydrated</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
