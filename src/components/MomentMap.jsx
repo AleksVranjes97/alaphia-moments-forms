@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import useFormContext from "../hooks/useFormContext";
 
 import arrow from '../files/arrow.png';
@@ -51,7 +51,7 @@ export default function MomentMap() {
             <div className="map_label_div" style={{backgroundColor: "#e9ecc9", position: "absolute", top: "815px", left: "105px", maxWidth: "130px"}}>{data.needs}</div>
         
             {/* avoidOutcome - Conditional rendering if filled out */}
-            {["one", "two"].includes(data.avoidOutcome) ? 
+            {["one", "two"].includes(data.avoidOutcome) && data.avoidOutcomeText ? 
                 <>
                     <div className="img-div" style={{left: "248px", top: "710px", background: "#cfd283"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#cfd283", position: "absolute", top: "730px", left: "270px", maxWidth: "200px"}}>My goal is to prevent</div>
@@ -62,7 +62,7 @@ export default function MomentMap() {
             }
 
             {/* captureOutcome - Conditional rendering if filled out */}
-            {["three", "four"].includes(data.avoidOutcome) ? 
+            {["three", "four"].includes(data.avoidOutcome) && data.captureOutcome ? 
                 <>
                     <div className="img-div" style={{left: "93px", top: "940px", background: "#f8e13e"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#f8e13e", position: "absolute", top: "960px", left: "115px", maxWidth: "200px"}}>My goal is to</div>
@@ -73,7 +73,7 @@ export default function MomentMap() {
             }
 
             {/* avoidFeeling - Conditional rendering if filled out */}
-            {["one", "two"].includes(data.avoidOutcome) ? 
+            {["one", "two"].includes(data.avoidOutcome) && data.avoidFeeling.length > 0 ? 
                 <>
                     <div className="img-div" style={{left: "268px", top: "970px", background: "#f7ef98"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#f7ef98", position: "absolute", top: "990px", left: "290px", maxWidth: "200px"}}>I am trying not to feel</div>
@@ -165,9 +165,10 @@ export default function MomentMap() {
                 <></>
             }
 
-            <div className="map_label_div" style={{backgroundColor: "#f8ac8a", position: "absolute", top: "2013px", left: "150px", maxWidth: "250px", textAlign: "center"}}>What do you notice when you see this moment journey unpacked in this way?</div>
-            <div className="map_label_div" style={{backgroundColor: "#f6a5a5", position: "absolute", top: "2100px", left: "175px", maxWidth: "200px", textAlign: "center"}}>How can you apply this observation to help you in the future?</div>
+            <div className="map_label_div" style={{backgroundColor: "#f8ac8a", position: "absolute", top: "1993px", left: "150px", maxWidth: "250px", textAlign: "center"}}>What do you notice when you see this moment journey unpacked in this way?</div>
+            <div className="map_label_div" style={{backgroundColor: "#f6a5a5", position: "absolute", top: "2080px", left: "180px", maxWidth: "190px", textAlign: "center"}}>How can you apply this observation to help you in the future?</div>
 
+            <div className="final-input-div" id="small-scroll" contentEditable="true" style={{backgroundColor: "#dd9a9a", position: "absolute", top: "2165px", left: "187px", textAlign: "center"}}></div>
             
         </div>
         <div className='no-bg-div'>

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import useFormContext from "../hooks/useFormContext";
-//import PackedCircle from "./PackedCircle";
 import MomentMap from "./MomentMap";
 
 import momentMapImg from "../files/mymomentmap.png";
@@ -236,18 +235,18 @@ const Congratulations = () => {
     }
     */
 
-    //useEffect(() => {
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
         //console.log(formattedData);
         //saveSubmission();
         //createData();
-
-    //}, []);
+    }, []);
 
     
     const content = (
         <div>
             <div className="no-bg-div">
-                <img className="my-moment-map-img" src={momentMapImg}></img>
+                <img className="my-moment-map-img" src={momentMapImg} alt=""></img>
             </div>
             {/*<PackedCircle formattedData={formattedData}></PackedCircle>*/}
             <MomentMap></MomentMap>

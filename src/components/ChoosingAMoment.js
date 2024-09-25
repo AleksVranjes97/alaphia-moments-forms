@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+
 const ChoosingAMoment = () => {
+    
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
     
     const content = (
         <div>

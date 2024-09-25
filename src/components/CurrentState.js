@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
 import useFormContext from "../hooks/useFormContext";
 
 const CurrentState = () => {
 
-    const { data, handleChange, handleOther, error } = useFormContext()
+    const { data, handleChange, handleOther, error } = useFormContext();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
 
     const content = (
         <div>

@@ -1,5 +1,4 @@
 import useFormContext from "../hooks/useFormContext";
-import ClearFormModal from "./ClearFormModal";
 import FormInputs from "./FormInputs";
 
 import app from "../config.js";
@@ -506,7 +505,11 @@ const Form = () => {
     const content = (
         <form className={(clearModal ? "dim-background-div" : "master-form")} onSubmit={handleSubmit}>
             <header>
+            {page !== 17 ?
                 <div className="image-div"></div>
+                :
+                <></>
+            }
             </header>
             <FormInputs></FormInputs> 
             <footer>
@@ -527,7 +530,7 @@ const Form = () => {
                     {/*<button onClick={jumpToGraph}>Graph</button>*/}
                     {/*<button onClick={printData}>Print</button>*/}
                     {page === 17  ? 
-                        <button type="button" className="clear-form-button" onClick={clearForm}>Home</button>
+                        <button type="button" className="home-button" onClick={clearForm}>Home</button>
                         :
                         <button type="button" className="clear-form-button" onClick={clearForm}>Clear Form</button>
                     }

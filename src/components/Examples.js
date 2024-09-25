@@ -1,5 +1,11 @@
+import { useEffect } from 'react';
 
 const Examples = () => {
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
+    
     const content = (
         <div>
             <div className="content-div">
