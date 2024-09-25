@@ -2,6 +2,9 @@ import useFormContext from "../hooks/useFormContext";
 import ClearFormModal from "./ClearFormModal";
 import FormInputs from "./FormInputs";
 
+import app from "../config.js";
+import { getDatabase, ref, set, push } from "firebase/database";
+
 const Form = () => {
     const {
         page,
@@ -15,6 +18,9 @@ const Form = () => {
         prevHide,
         nextHide
     } = useFormContext();
+
+    //-------------------------------------------------------------------------------------
+    // PAGE NAVIGATION...
 
     //---------------------------------------------------//
     // Handle previous page navigation depending on page //
@@ -109,12 +115,12 @@ const Form = () => {
             //----------------//
             case 7:
                 navigate = handleValidation("momentLocation", "mLOtherField", "mLOtherFieldOld", "mLOtherCheckbox",
-                                 ["Home",
+                                 ["At home",
                                   "Online",
-                                  "Restaurant/club/pub",
-                                  "Work",
-                                  "School",
-                                  "Recreational event",
+                                  "At a restaurant/club/pub",
+                                  "At work",
+                                  "At school",
+                                  "At a recreational event",
                                   "At an in-person store",
                                   "At a social gathering",
                                   "On vacation"]);
@@ -281,7 +287,10 @@ const Form = () => {
                 if (data.behaviouralResponse === "") {
                     setError(true);
                 } else {
+                    // Final formatting of data and send it to Firebase
                     setError(false);
+                    sendData();
+                    finalFormatting();
                     setPage(prev => prev + 1);
                 }
                 break;                 
@@ -290,6 +299,9 @@ const Form = () => {
                 setPage(prev => prev + 1);
         }
     }
+
+    //----------------------------------------------------------------------------------
+    // SPECIFIC FORMATTING...
 
     //---------------------------------------------------------------//
     // Handle all edge case validation with "Other" field user input //
@@ -366,18 +378,6 @@ const Form = () => {
         e.preventDefault();
     }
 
-    const printData = () => {
-        console.log(JSON.stringify(data));
-        console.log("error: ", error);
-        console.log("page: ", page);
-    }
-
-
-    // Debugging
-    const jumpToGraph = () => {
-        setPage(19);
-    }
-
     //------------------------------------//
     // Set all form data back to defaults //
     //------------------------------------//
@@ -430,6 +430,78 @@ const Form = () => {
         setData(newData);
         setPage(0);
     }
+
+    //--------------------------------------------------------------------
+    // FINAL DATA FORMATTING + SUBMISSION...
+
+    //-------------------------------------//
+    // Helper function to stringify arrays //
+    //-------------------------------------//
+    const stringifyArray = (arr) => {
+        var textString = "";
+        for (var i in arr) {
+            textString += arr[i];
+            if (arr[i] !== arr[arr.length - 1]) {
+                textString += ", ";
+            }
+        }
+        return textString;
+    }
+
+    //-----------------------------//
+    // Last bit of data formatting //
+    //-----------------------------//
+    const finalFormatting = () => {
+
+        // Add dollar sign to howMuch if it's not there
+        var newVal = "";
+        if (data.howMuch.charAt(0) !== "$") {
+            newVal = "$" + data.howMuch;
+            setData(prevData => ({
+                ...prevData,
+                "howMuch": newVal
+            }));
+        }
+
+        // Stringify all arrays, comma separated values
+        setData(prevData => ({
+            ...prevData,
+            "momentLocation": stringifyArray(data.momentLocation),
+            "anyoneElseInvolved": stringifyArray(data.anyoneElseInvolved),
+            "currentState": stringifyArray(data.currentState),
+            "needs": stringifyArray(data.needs),
+            "avoidFeeling": stringifyArray(data.avoidFeeling),
+            "captureFeeling": stringifyArray(data.captureFeeling),
+            "reflectingFeeling": stringifyArray(data.reflectingFeeling)
+        }));
+    }
+
+    //-------------------------------------//
+    // Send form data to Firebase database //
+    //-------------------------------------//
+    const sendData = () => {
+        const db = getDatabase(app);
+        const newEntry = push(ref(db, "data"));
+        set(newEntry, {
+            data: data
+        })
+    }
+
+    //---------------------------------------------------------------
+    // DEBUGGING FUNCTIONS...
+
+    const printData = () => {
+        console.log(data);
+        console.log("error: ", error);
+        console.log("page: ", page);
+    }
+
+    const jumpToGraph = () => {
+        setPage(19);
+    }
+
+    //---------------------------------------------------------------
+    // RENDER COMPONENT...
 
     const content = (
         <form className={(clearModal ? "dim-background-div" : "master-form")} onSubmit={handleSubmit}>

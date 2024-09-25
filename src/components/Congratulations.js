@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-//import { saveAs } from "file-saver";
 import useFormContext from "../hooks/useFormContext";
 //import PackedCircle from "./PackedCircle";
 import MomentMap from "./MomentMap";
+
+import momentMapImg from "../files/mymomentmap.png";
 
 const Congratulations = () => {
 
@@ -235,20 +236,18 @@ const Congratulations = () => {
     }
     */
 
-    useEffect(() => {
+    //useEffect(() => {
         //console.log(formattedData);
         //saveSubmission();
-        createData();
+        //createData();
 
-    }, []);
+    //}, []);
 
     
     const content = (
         <div>
             <div className="no-bg-div">
-                <h1>MY</h1>
-                <h1>MOMENT</h1>
-                <h1>MAP</h1>
+                <img className="my-moment-map-img" src={momentMapImg}></img>
             </div>
             {/*<PackedCircle formattedData={formattedData}></PackedCircle>*/}
             <MomentMap></MomentMap>

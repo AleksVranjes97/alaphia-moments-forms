@@ -19,10 +19,10 @@ const AnyoneElseInvolved = () => {
                         <input type="checkbox" 
                                id="noejm" 
                                name="anyoneElseInvolved"
-                               value="No one else, just me."
-                               checked={data.anyoneElseInvolved.includes("No one else, just me.")}
+                               value="No one else, just me"
+                               checked={data.anyoneElseInvolved.includes("No one else, just me")}
                                onChange={handleChange} />
-                         <label htmlFor="noejm">No one else, just me.</label>
+                         <label htmlFor="noejm">No one else, just me</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 

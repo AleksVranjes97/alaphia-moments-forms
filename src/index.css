@@ -283,7 +283,7 @@ h2 {
   width: var(--div-width);
   max-width: var(--div-width);
   min-width: var(--div-width);
-  height: 2200px;
+  height: 2260px;
   background-image: url("./files/lines_desktop.png");
   background-size: 100% auto;
   overflow: auto;
@@ -332,6 +332,13 @@ img {
 .arrow-img {
   width: 12px;
   height: 18px;
+}
+
+
+.my-moment-map-img {
+  width: 295px;
+  height: 233px;
+  margin-left: -20px;
 }
 
 @media screen and (max-width: 375px) {

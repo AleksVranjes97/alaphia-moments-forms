@@ -20,8 +20,8 @@ const MomentLocation = () => {
                         <input type="checkbox" 
                                id="home" 
                                name="momentLocation"
-                               value="Home"
-                               checked={data.momentLocation.includes("Home")}
+                               value="At home"
+                               checked={data.momentLocation.includes("At home")}
                                onChange={handleChange} />
                          <label htmlFor="home">Home</label>
                     </div>
@@ -38,8 +38,8 @@ const MomentLocation = () => {
                         <input type="checkbox" 
                                id="rcp" 
                                name="momentLocation"
-                               value="Restaurant/club/pub"
-                               checked={data.momentLocation.includes("Restaurant/club/pub")}
+                               value="At a restaurant/club/pub"
+                               checked={data.momentLocation.includes("At a restaurant/club/pub")}
                                onChange={handleChange} />
                          <label htmlFor="rcp">Restaurant/club/pub</label>
                     </div>
@@ -47,8 +47,8 @@ const MomentLocation = () => {
                         <input type="checkbox" 
                                id="work" 
                                name="momentLocation"
-                               value="Work"
-                               checked={data.momentLocation.includes("Work")}
+                               value="At work"
+                               checked={data.momentLocation.includes("At work")}
                                onChange={handleChange} />
                          <label htmlFor="work">Work</label>
                     </div>
@@ -56,8 +56,8 @@ const MomentLocation = () => {
                         <input type="checkbox" 
                                id="school" 
                                name="momentLocation"
-                               value="School"
-                               checked={data.momentLocation.includes("School")}
+                               value="At school"
+                               checked={data.momentLocation.includes("At school")}
                                onChange={handleChange} />
                          <label htmlFor="school">School</label>
                     </div>
@@ -65,8 +65,8 @@ const MomentLocation = () => {
                         <input type="checkbox" 
                                id="re" 
                                name="momentLocation" 
-                               value="Recreational event"
-                               checked={data.momentLocation.includes("Recreational event")}
+                               value="At a recreational event"
+                               checked={data.momentLocation.includes("At a recreational event")}
                                onChange={handleChange} />
                          <label htmlFor="re">Recreational event</label>
                     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import useFormContext from "../hooks/useFormContext";
 
 import arrow from '../files/arrow.png';
@@ -7,33 +7,19 @@ export default function MomentMap() {
 
   const { data } = useFormContext();
 
-  //-------------------------------------//
-  // Helper function to stringify arrays //
-  //-------------------------------------//
-  const stringifyArray = (arr) => {
-    var val = "";
-    for (var i in arr) {
-        val += arr[i];
-        if (arr[i] != arr[arr.length - 1]) {
-            val += ", ";
-        }
-    }
-
-    return val;
-  }
-
   return (
     <div>
         <div className="no-bg-div">
             <p>Congratulations on completing another "Moment Exploration"!</p>
-            <p>Each moment is a journey unto itself, a constellation of numerous external and internal factors. These factors include needs, feelings, motives, behavioural instincts, self-talk, and strategies that merge into behaviour patterns.</p>
+            <p>Each moment is a journey unto itself, a constellation of numerous external and internal factors.</p>
+            <p>These factors include needs, feelings, motives, behavioural instincts, self-talk, and strategies that merge into behaviour patterns.</p>
             <p>Each time you record a moment, you will deepen your understanding. Over time, with patience and commitment, you will begin to see how the internal and external elements of your life show up in patterns that are uniquely yours.</p>
             <p>Seeing a pattern is the first step in changing a pattern. Your patience and commitment are key. Users who record moments consistently are successful in developing the deep levels of self-discovery needed for meaningful and lasting change.</p>
             
             <div style={{display: "flex", flexDirection: "horizontal"}}>
-                <p className='underlined_p'><strong>Check your journey</strong></p>
+                <p className='underlined_p'><strong>Explore your moment journey</strong></p>
                 <div className='map_label_div' style={{backgroundColor: "#fafecc", marginLeft: "12px", marginTop: "19px", paddingTop: "2px", paddingBottom: "0px"}}>
-                    <img className="arrow-img" src={arrow}></img>
+                    <img className="arrow-img" src={arrow} alt=""></img>
                 </div>
             </div>
         </div>
@@ -42,17 +28,17 @@ export default function MomentMap() {
             {/* momentLocation */}
             <div className="img-div" style={{marginLeft: "65px", marginTop: "75px", background: "#e3ec63"}}></div>
             <div className="map_label_div" style={{backgroundColor: "#e3ec63", marginLeft: "85px", marginTop: "100px"}}>I was / I'm</div>
-            <div className="map_label_div" style={{backgroundColor: "#fafecc", marginLeft: "85px", marginTop: "10px", maxWidth: "160px"}}>{stringifyArray(data.momentLocation)}</div>
+            <div className="map_label_div" style={{backgroundColor: "#fafecc", marginLeft: "85px", marginTop: "10px", maxWidth: "165px"}}>{data.momentLocation}</div>
 
             {/* anyoneElseInvolved */}
             <div className="img-div" style={{left: "255px", top: "105px", background: "#e3ec63"}}></div>
             <div className="map_label_div" style={{backgroundColor: "#e3ec63", position: "absolute", top: "130px", left: "275px", maxWidth: "135px"}}>People involved include</div>
-            <div className="map_label_div" style={{backgroundColor: "#fafecc", position: "absolute", top: "190px", left: "275px", maxWidth: "130px"}}>{stringifyArray(data.anyoneElseInvolved)}</div>
+            <div className="map_label_div" style={{backgroundColor: "#fafecc", position: "absolute", top: "190px", left: "275px", maxWidth: "130px"}}>{data.anyoneElseInvolved}</div>
             
             {/* currentState */}
             <div className="img-div" style={{left: "198px", top: "300px", background: "#cfdc47"}}></div>
             <div className="map_label_div" style={{backgroundColor: "#cfdc47", position: "absolute", top: "320px", left: "220px", maxWidth: "200px"}}>I was / I'm already feeling</div>
-            <div className="map_label_div" style={{backgroundColor: "#ecf3af", position: "absolute", top: "360px", left: "220px", maxWidth: "200px"}}>{stringifyArray(data.currentState)}</div>
+            <div className="map_label_div" style={{backgroundColor: "#ecf3af", position: "absolute", top: "360px", left: "220px", maxWidth: "200px"}}>{data.currentState}</div>
         
             {/* moment */}
             <div className="img-div" style={{left: "148px", top: "470px", background: "#ccd675"}}></div>
@@ -62,10 +48,10 @@ export default function MomentMap() {
             {/* needs */}
             <div className="img-div" style={{left: "83px", top: "755px", background: "#bbc256"}}></div>
             <div className="map_label_div" style={{backgroundColor: "#bbc256", position: "absolute", top: "775px", left: "105px", maxWidth: "200px"}}>I'm needing</div>
-            <div className="map_label_div" style={{backgroundColor: "#e9ecc9", position: "absolute", top: "815px", left: "105px", maxWidth: "130px"}}>{stringifyArray(data.needs)}</div>
+            <div className="map_label_div" style={{backgroundColor: "#e9ecc9", position: "absolute", top: "815px", left: "105px", maxWidth: "130px"}}>{data.needs}</div>
         
             {/* avoidOutcome - Conditional rendering if filled out */}
-            {data.avoidOutcomeText ? 
+            {["one", "two"].includes(data.avoidOutcome) ? 
                 <>
                     <div className="img-div" style={{left: "248px", top: "710px", background: "#cfd283"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#cfd283", position: "absolute", top: "730px", left: "270px", maxWidth: "200px"}}>My goal is to prevent</div>
@@ -76,7 +62,7 @@ export default function MomentMap() {
             }
 
             {/* captureOutcome - Conditional rendering if filled out */}
-            {data.captureOutcome ? 
+            {["three", "four"].includes(data.avoidOutcome) ? 
                 <>
                     <div className="img-div" style={{left: "93px", top: "940px", background: "#f8e13e"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#f8e13e", position: "absolute", top: "960px", left: "115px", maxWidth: "200px"}}>My goal is to</div>
@@ -87,43 +73,43 @@ export default function MomentMap() {
             }
 
             {/* avoidFeeling - Conditional rendering if filled out */}
-            {data.avoidFeeling.length > 0 ? 
+            {["one", "two"].includes(data.avoidOutcome) ? 
                 <>
                     <div className="img-div" style={{left: "268px", top: "970px", background: "#f7ef98"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#f7ef98", position: "absolute", top: "990px", left: "290px", maxWidth: "200px"}}>I am trying not to feel</div>
-                    <div className="map_label_div" style={{backgroundColor: "#f8f5cc", position: "absolute", top: "1030px", left: "290px", maxWidth: "170px"}}>{stringifyArray(data.avoidFeeling)}</div>
+                    <div className="map_label_div" style={{backgroundColor: "#f8f5cc", position: "absolute", top: "1030px", left: "290px", maxWidth: "170px"}}>{data.avoidFeeling}</div>
                 </>
             :
                 <></>
             }
 
             {/* captureFeeling - Conditional rendering if filled out */}
-            {data.captureFeeling.length > 0 ? 
+            {["three", "four"].includes(data.avoidOutcome) && data.captureFeeling.length > 0 ? 
                 <>
                     <div className="img-div" style={{left: "78px", top: "1150px", background: "#f8e13e"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#f8e13e", position: "absolute", top: "1170px", left: "100px", maxWidth: "200px"}}>I am trying to feel</div>
-                    <div className="map_label_div" style={{backgroundColor: "#fef5b6", position: "absolute", top: "1210px", left: "100px", maxWidth: "200px"}}>{stringifyArray(data.captureFeeling)}</div>
+                    <div className="map_label_div" style={{backgroundColor: "#fef5b6", position: "absolute", top: "1210px", left: "100px", maxWidth: "200px"}}>{data.captureFeeling}</div>
                 </>
             :
                 <></>
             }
 
             {/* reflectingFeeling - Conditional rendering if filled out */}
-            {data.reflectingFeeling.length > 0 ? 
+            {data.avoidOutcome === "five" && data.reflectingFeeling.length > 0 ? 
                 <>
                     <div className="img-div" style={{left: "298px", top: "1250px", background: "#f5c02c"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#f5c02c", position: "absolute", top: "1270px", left: "320px", maxWidth: "200px"}}>I currently feel</div>
-                    <div className="map_label_div" style={{backgroundColor: "#fef1cd", position: "absolute", top: "1310px", left: "320px", maxWidth: "200px"}}>{stringifyArray(data.reflectingFeeling)}</div>
+                    <div className="map_label_div" style={{backgroundColor: "#fef1cd", position: "absolute", top: "1310px", left: "320px", maxWidth: "200px"}}>{data.reflectingFeeling}</div>
                 </>
             :
                 <></>
             }
 
             {/* aOBodyFeeling - Conditional rendering if filled out */}
-            {data.aOBodyFeeling ? 
+            {["one", "two"].includes(data.avoidOutcome) && data.aOBodyFeeling ? 
                 <>
                     <div className="img-div" style={{left: "78px", top: "1380px", background: "#f5bc63"}}></div>
-                    <div className="map_label_div" style={{backgroundColor: "#f5bc63", position: "absolute", top: "1400px", left: "100px", maxWidth: "200px"}}>Which I feel in my body</div>
+                    <div className="map_label_div" style={{backgroundColor: "#f5bc63", position: "absolute", top: "1400px", left: "100px", maxWidth: "200px"}}>Which I feel in my</div>
                     <div className="map_label_div" style={{backgroundColor: "#fdedd1", position: "absolute", top: "1440px", left: "100px", maxWidth: "200px"}}>{data.aOBodyFeeling}</div>
                 </>
             :
@@ -131,10 +117,10 @@ export default function MomentMap() {
             }
 
             {/* cOBodyFeeling - Conditional rendering if filled out */}
-            {data.cOBodyFeeling ? 
+            {["three", "four"].includes(data.avoidOutcome) && data.cOBodyFeeling ? 
                 <>
                     <div className="img-div" style={{left: "78px", top: "1380px", background: "#f5bc63"}}></div>
-                    <div className="map_label_div" style={{backgroundColor: "#f5bc63", position: "absolute", top: "1400px", left: "100px", maxWidth: "200px"}}>Which I feel in my body</div>
+                    <div className="map_label_div" style={{backgroundColor: "#f5bc63", position: "absolute", top: "1400px", left: "100px", maxWidth: "200px"}}>Which I feel in my</div>
                     <div className="map_label_div" style={{backgroundColor: "#fdedd1", position: "absolute", top: "1440px", left: "100px", maxWidth: "200px"}}>{data.cOBodyFeeling}</div>
                 </>
             :
@@ -142,10 +128,10 @@ export default function MomentMap() {
             }
 
             {/* rFBodyFeeling - Conditional rendering if filled out */}
-            {data.rFBodyFeeling ? 
+            {data.avoidOutcome === "five" && data.rFBodyFeeling ? 
                 <> 
                     <div className="img-div" style={{left: "78px", top: "1380px", background: "#f5bc63"}}></div>
-                    <div className="map_label_div" style={{backgroundColor: "#f5bc63", position: "absolute", top: "1400px", left: "100px", maxWidth: "200px"}}>Which I feel in my body</div>
+                    <div className="map_label_div" style={{backgroundColor: "#f5bc63", position: "absolute", top: "1400px", left: "100px", maxWidth: "200px"}}>Which I feel in my</div>
                     <div className="map_label_div" style={{backgroundColor: "#fdedd1", position: "absolute", top: "1440px", left: "100px", maxWidth: "200px"}}>{data.rFBodyFeeling}</div>
                 </>
             :
@@ -179,8 +165,10 @@ export default function MomentMap() {
                 <></>
             }
 
-            <div className="map_label_div" style={{backgroundColor: "#f8ac8a", position: "absolute", top: "2053px", left: "150px", maxWidth: "250px", textAlign: "center"}}>What do you notice about all this information together?</div>
-            <div className="map_label_div" style={{backgroundColor: "#f6a5a5", position: "absolute", top: "2120px", left: "175px", maxWidth: "200px", textAlign: "center"}}>How can this help you in the future?</div>
+            <div className="map_label_div" style={{backgroundColor: "#f8ac8a", position: "absolute", top: "2013px", left: "150px", maxWidth: "250px", textAlign: "center"}}>What do you notice when you see this moment journey unpacked in this way?</div>
+            <div className="map_label_div" style={{backgroundColor: "#f6a5a5", position: "absolute", top: "2100px", left: "175px", maxWidth: "200px", textAlign: "center"}}>How can you apply this observation to help you in the future?</div>
+
+            
         </div>
         <div className='no-bg-div'>
             <p><strong>IMPORTANT</strong></p>
