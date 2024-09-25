@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+//import { saveAs } from "file-saver";
 import useFormContext from "../hooks/useFormContext";
-import PackedCircle from "./PackedCircle";
+//import PackedCircle from "./PackedCircle";
 import MomentMap from "./MomentMap";
 
 const Congratulations = () => {
@@ -227,23 +228,30 @@ const Congratulations = () => {
         }));
     }
 
+    /*
+    const saveSubmission = () => {
+        const file = new Blob(["Another Moment logged!", data], { type: 'text/plain;charset=utf-8' });
+        saveAs(file, 'moments_log.txt');
+    }
+    */
+
     useEffect(() => {
-        console.log(formattedData);
+        //console.log(formattedData);
+        //saveSubmission();
         createData();
+
     }, []);
 
+    
     const content = (
         <div>
-            <div className="content-div">
+            <div className="no-bg-div">
                 <h1>MY</h1>
                 <h1>MOMENT</h1>
                 <h1>MAP</h1>
             </div>
             {/*<PackedCircle formattedData={formattedData}></PackedCircle>*/}
             <MomentMap></MomentMap>
-            <div className="content-div">
-                
-            </div>
         </div>
     )
 

@@ -178,7 +178,7 @@ const CurrentState = () => {
                                value="overwhelmed"
                                checked={data.currentState.includes("overwhelmed")}
                                onChange={handleChange} />
-                        <label htmlFor="oberwhelmed">overwhelmed</label>
+                        <label htmlFor="overwhelmed">overwhelmed</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 

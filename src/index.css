@@ -300,6 +300,40 @@ h2 {
   font-weight: bold;
 }
 
+.no-bg-div {
+  margin: 10px auto;
+  width: var(--div-width);
+  max-width: var(--div-width);
+  min-width: var(--div-width);
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+.underlined_p {
+  text-decoration: underline solid #e3ec63;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
+.img-div {
+  width: 22px;
+  height: 36px;
+  position: absolute;
+  -webkit-mask:url('./files/icon.png') center/contain;
+          mask:url('./files/icon.png') center/contain;
+}
+
+img {
+  width: 28px;
+  height: 45px;
+}
+
+.arrow-img {
+  width: 12px;
+  height: 18px;
+}
+
 @media screen and (max-width: 375px) {
   .content-div {
     width: var(--sm-mobile-div-width);
@@ -321,6 +355,12 @@ h2 {
   .image-div {
     width: var(--sm-mobile-div-width);
     height: var(--sm-mobile-image-height);
+  }
+
+  .no-bg-div {
+    width: var(--sm-mobile-div-width);
+    max-width: var(--sm-mobile-div-width);
+    min-width: var(--sm-mobile-div-width);
   }
 }
 
@@ -345,5 +385,11 @@ h2 {
   .image-div {
     width: var(--mobile-div-width);
     height: var(--mobile-image-height);
+  }
+
+  .no-bg-div {
+    width: var(--mobile-div-width);
+    max-width: var(--mobile-div-width);
+    min-width: var(--mobile-div-width);
   }
 }
