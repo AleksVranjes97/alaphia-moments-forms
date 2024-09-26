@@ -119,7 +119,7 @@ const Needs = () => {
                                value="Romance"
                                checked={data.needs.includes("Romance")}
                                onChange={handleChange} />
-                        <label htmlFor="romance">ROMANCE intimacy' passion affection tenderness touch</label>
+                        <label htmlFor="romance">ROMANCE intimacy passion affection tenderness touch</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 

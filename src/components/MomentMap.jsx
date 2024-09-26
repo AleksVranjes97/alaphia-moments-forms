@@ -99,7 +99,7 @@ export default function MomentMap() {
                 <>
                     <div className="img-div" style={{left: "298px", top: "1250px", background: "#f5c02c"}}></div>
                     <div className="map_label_div" style={{backgroundColor: "#f5c02c", position: "absolute", top: "1270px", left: "320px", maxWidth: "200px"}}>I currently feel</div>
-                    <div className="map_label_div" style={{backgroundColor: "#fef1cd", position: "absolute", top: "1310px", left: "320px", maxWidth: "200px"}}>{data.reflectingFeeling}</div>
+                    <div className="map_label_div" style={{backgroundColor: "#fef1cd", position: "absolute", top: "1310px", left: "320px", maxWidth: "140px"}}>{data.reflectingFeeling}</div>
                 </>
             :
                 <></>

@@ -21,11 +21,11 @@ const BehaviouralResponse = () => {
                 <p><strong>What type of behavioural response did you exhibit based on the needs and emotions you identified in this reflective exercise? </strong><span className="error-span">*</span></p>
                 <p>Examples of behaviour responses are usually one word verbs.</p>
                 <p>For instance:</p>
-                <p><strong>Avoidance and Withdrawal</strong> Avoiding, Numbing (through screens, eating, substances, shopping, etc.) Quitting,Procrastinating, Ignoring, Withdrawing, Denying, Sleeping, Leaving, Pretending</p>
+                <p><strong>Avoidance and Withdrawal</strong> Avoiding, Numbing (through screens, eating, substances, shopping, etc.) Quitting, Procrastinating, Ignoring, Withdrawing, Denying, Sleeping, Leaving, Pretending</p>
                 <p><strong>Confrontation and Conflict</strong> Judging, Scolding, Attacking,Arguing, Criticizing, Yelling, Avenging, Nagging,</p> 
                 <p><strong>Coping</strong> Surrendering, Crying, Grieving, Imagining, Rescuing, Exercising </p>
                 <p><strong>Social and Communication</strong> Joking, Talking, Negotiating, Deflecting, Convincing, Explaining, Laughing, Joining, Agreeing, Acquiescing, Empathizing</p>
-                <p><strong>Analysis and Reflection</strong>Inquiring, Analyzing, Ruminating, Justifying, Catastrophizing</p>
+                <p><strong>Analysis and Reflection</strong> Inquiring, Analyzing, Ruminating, Justifying, Catastrophizing</p>
                 <p><strong>Accumulation and Preparation</strong> Spending, Accumulating, Stockpiling</p>
                 <p><strong>Celebration and Acceptance</strong> Celebrating, Pursuing</p>
                 <p><strong>Rebellion and Resistance</strong> Rebelling, Posturing</p>

@@ -35,7 +35,7 @@ const CaptureOutcome = () => {
                                 value="Invigoration"
                                 checked={data.captureFeeling.includes("Invigoration")}
                                 onChange={handleChange} />
-                        <label htmlFor="invigoration">INVIGORATION Anticipation Interest, Curiosity</label>
+                        <label htmlFor="invigoration">INVIGORATION anticipation interest, curiosity</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
@@ -44,7 +44,7 @@ const CaptureOutcome = () => {
                                 value="Enjoyment"
                                 checked={data.captureFeeling.includes("Enjoyment")}
                                 onChange={handleChange} />
-                        <label htmlFor="enjoyment">ENJOYMENT Contentment, Satisfaction, Relaxation, Amusement, Relief</label>
+                        <label htmlFor="enjoyment">ENJOYMENT Contentment, satisfaction, relaxation, amusement, relief</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
@@ -53,7 +53,7 @@ const CaptureOutcome = () => {
                                 value="joy"
                                 checked={data.captureFeeling.includes("joy")}
                                 onChange={handleChange} />
-                        <label htmlFor="joy">JOY Happiness, Delight, Excitement, bliss, euphoria</label>
+                        <label htmlFor="joy">JOY Happiness, Delight, excitement, bliss, euphoria</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 

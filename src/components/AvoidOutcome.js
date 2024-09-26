@@ -44,7 +44,7 @@ const AvoidOutcome = () => {
                                 value="Fear"
                                 checked={data.avoidFeeling.includes("Fear")}
                                 onChange={handleChange} />
-                        <label htmlFor="fear">FEAR Apprehension, Worry, Nervousness, Unease, anxiety, alarm, panic</label>
+                        <label htmlFor="fear">FEAR Apprehension, worry, nervousness, Unease, anxiety, alarm, panic</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
@@ -62,7 +62,7 @@ const AvoidOutcome = () => {
                                 value="Guilt"
                                 checked={data.avoidFeeling.includes("Guilt")}
                                 onChange={handleChange} />
-                        <label htmlFor="guilt">GUILT Regretful, Sorry</label>
+                        <label htmlFor="guilt">GUILT Regretful, sorry</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
@@ -80,7 +80,7 @@ const AvoidOutcome = () => {
                                 value="Anger"
                                 checked={data.avoidFeeling.includes("Anger")}
                                 onChange={handleChange} />
-                        <label htmlFor="anger2">ANGER Annoyance, Irritation, Frustration, Agitation, rage, fury</label>
+                        <label htmlFor="anger2">ANGER Annoyance, irritation, frustration, agitation, rage, fury</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
@@ -89,7 +89,7 @@ const AvoidOutcome = () => {
                                 value="Contempt"
                                 checked={data.avoidFeeling.includes("Contempt")}
                                 onChange={handleChange} />
-                        <label htmlFor="contempt">CONTEMPT Revulsion, Loathing, Repugnance, disgust</label>
+                        <label htmlFor="contempt">CONTEMPT Revulsion, loathing, repugnance, disgust</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 

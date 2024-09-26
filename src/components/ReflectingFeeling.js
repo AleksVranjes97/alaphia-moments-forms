@@ -36,7 +36,7 @@ const ReflectingFeeling = () => {
                                 value="Fear"
                                 checked={data.reflectingFeeling.includes("Fear")}
                                 onChange={handleChange} />
-                        <label htmlFor="fear2">Fear Apprehension, Worry, Nervousness, Unease, anxiety, alarm, panic</label>
+                        <label htmlFor="fear2">Fear Apprehension, worry, nervousness, unease, anxiety, alarm, panic</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
@@ -63,7 +63,7 @@ const ReflectingFeeling = () => {
                                 value="Guilt"
                                 checked={data.reflectingFeeling.includes("Guilt")}
                                 onChange={handleChange} />
-                        <label htmlFor="guilt2">Guilt Regretful, Sorry</label>
+                        <label htmlFor="guilt2">Guilt Regretful, sorry</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
@@ -72,7 +72,7 @@ const ReflectingFeeling = () => {
                                 value="Anger"
                                 checked={data.reflectingFeeling.includes("Anger")}
                                 onChange={handleChange} />
-                        <label htmlFor="anger3">Anger Annoyance, Irritation, Frustration, Agitation, rage, fury</label>
+                        <label htmlFor="anger3">Anger Annoyance, irritation, frustration, agitation, rage, fury</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
@@ -81,7 +81,7 @@ const ReflectingFeeling = () => {
                                 value="Contempt"
                                 checked={data.reflectingFeeling.includes("Contempt")}
                                 onChange={handleChange} />
-                        <label htmlFor="contempt2">Contempt, Revulsion, Loathing, Repugnance, disgust</label>
+                        <label htmlFor="contempt2">Contempt, Revulsion, loathing, repugnance, disgust</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
@@ -117,7 +117,7 @@ const ReflectingFeeling = () => {
                                 value="Enjoyment"
                                 checked={data.reflectingFeeling.includes("Enjoyment")}
                                 onChange={handleChange} />
-                        <label htmlFor="enjoyment2">Enjoyment Contentment, Satisfaction, Relaxation, Amusement, Relief</label>
+                        <label htmlFor="enjoyment2">Enjoyment Contentment, satisfaction, relaxation, amusement, relief</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 
@@ -126,7 +126,7 @@ const ReflectingFeeling = () => {
                                 value="Joy"
                                 checked={data.reflectingFeeling.includes("Joy")}
                                 onChange={handleChange} />
-                        <label htmlFor="joy2">Joy, Happiness, Delight, Excitement, bliss, euphoria</label>
+                        <label htmlFor="joy2">Joy, Happiness, delight, excitement, bliss, euphoria</label>
                     </div>
                     <div className="check-options-div">
                         <input type="checkbox" 

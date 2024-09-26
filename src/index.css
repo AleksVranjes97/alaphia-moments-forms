@@ -374,6 +374,12 @@ img {
   outline: none;
 }
 
+[contentEditable=true]:empty:before {
+  content: "Click here to type...";
+  color: grey;
+  cursor: text;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -442,6 +448,10 @@ img {
   .home-button {
     margin-left: 180px;
   }
+
+  [contentEditable=true]:empty:before {
+    content: "Tap here to type...";
+  }
 }
 
 @media screen and (max-width: 720px) and (min-width: 376px) {
@@ -475,5 +485,9 @@ img {
 
   .home-button {
     margin-left: 135px;
+  }
+
+  [contentEditable=true]:empty:before {
+    content: "Tap here to type...";
   }
 }
